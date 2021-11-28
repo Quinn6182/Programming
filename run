@@ -1,0 +1,15 @@
+#!/bin/bash
+
+if [ "$1" == "" ]; then
+    echo "arg 1 should be file name"
+elif [ "$2" == "" ]; then
+    echo "arg 2 should be compiler"
+elif [ "$2" == "gcc" ]; then
+    gcc $1
+    ./a.out
+elif [ "$2" == "g++" ]; then
+    g++ $1
+    ./a.out
+else
+    $2 $1
+fi
